@@ -15,9 +15,9 @@ interface MyAppProps {
 
 class MyApp extends App<MyAppProps, {}> {
   static async getInitialProps({
-                                 Component,
-                                 ctx,
-                                  }: any): Promise<AppInitialProps> {
+    Component,
+    ctx,
+  }: any): Promise<AppInitialProps> {
     let pageProps = {};
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
@@ -32,12 +32,13 @@ class MyApp extends App<MyAppProps, {}> {
     // const viewFlag = loading && props.store.getState().getMe.userData !== null;
 
     return (
-        <Provider store={store}>
-          <GlobalStyles />
-          <ThemeProvider theme={theme}>
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </Provider>
+      <Provider store={store}>
+        <noscript>You should use javascript</noscript>
+        <GlobalStyles />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </Provider>
     );
   }
 }

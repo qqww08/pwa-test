@@ -1,0 +1,9 @@
+{
+  "name": "Your app name",
+  "short_name": "Your app short_name",
+  "background_color": "#FFFFFF",
+  "theme_color": "status bar color",
+  "description": "Your app description",
+  "display": "standalone",
+  "start_url": "/"
+}
